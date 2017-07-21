@@ -10,8 +10,8 @@ var config = {
 firebase.initializeApp(config);
 var database = firebase.database();
 
-reference1 = database.ref("users").child(0);
-addUser(reference1,"Liliana", "lili143", "lili7@gmail.com", "987927897", "10012345656", "Av. San Isido N°774" , " SAC",  "Venta calzado" , "Calzados Jorgito SAC", "Representante legal", "part1", "descripcion", "objetivo", "20 000", "1500", "25");
+reference = database.ref("users").child(0);
+addUser(reference,"Liliana", "lili143", "lili7@gmail.com", "987927897", "10012345656", "Av. San Isido N°774" , " SAC",  "Venta calzado" , "Calzados Jorgito SAC", "Representante legal", "part1", "descripcion", "objetivo", "20 000", "1500", "25");
 
 function addUser(reference1, name, password, email, phone, ruc, address, type, tradename, businessname, position, partners, description, objetive, amountrequired, amountraised, inversors){
   var obj = {
@@ -38,5 +38,5 @@ function addUser(reference1, name, password, email, phone, ruc, address, type, t
       "inversors": inversors
     }
   };
-  reference1.update(obj);
+  reference.update(obj);
 }
