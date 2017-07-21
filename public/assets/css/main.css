@@ -19,6 +19,22 @@ GENERAL
 #contacta {
   padding-top: 6%; }
 
+.btn-general {
+  background: #A8CB17; }
+
+.txt-general {
+  color: #A8CB17; }
+
+.txt-secondary {
+  color: #17649A !important; }
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 100; }
+
 .btn-first {
   display: flex;
   justify-content: center;
@@ -30,8 +46,16 @@ GENERAL
 .btn-first {
   width: 50%;
   margin-top: 45px;
-  background: #00C9E7;
+  background: #40b3df;
   height: 54px; }
+
+/*Header*/
+header .nav-wrapper {
+  border-bottom: 3px solid blue; }
+  header .nav-wrapper li a {
+    color: #000 !important; }
+    header .nav-wrapper li a:hover {
+      color: #fff !important; }
 
 #options div {
   display: inline-block; }
@@ -41,6 +65,15 @@ GENERAL
   width: 80%;
   margin: 0 auto;
   padding-top: 21px; }
+
+#tabs {
+  margin-top: 0; }
+  #tabs .tab a.active {
+    background: rgba(238, 238, 238, 0.5); }
+  #tabs li.indicator {
+    background: #17649A; }
+  #tabs .tab a {
+    color: #A8CB17; }
 
 #botones ul li {
   display: inline-block; }

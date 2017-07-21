@@ -6,9 +6,23 @@ GENERAL
 #comentario,
 #contacta {
   padding-top: 6%;
-
 }
-
+.btn-general {
+  background: $bg-btn;
+}
+.txt-general {
+  color: $bg-btn;
+}
+.txt-secondary {
+  color: $bg-secondary!important;
+}
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 100;
+}
 %flex {
   display: flex;
 justify-content: center;
@@ -24,6 +38,20 @@ align-items: center;
   height: 54px;
   @extend  %flex;
 }
+/*Header*/
+header {
+  .nav-wrapper {
+    border-bottom: 3px solid blue;
+    li a{
+      color: #000!important;
+      &:hover {
+        color: #fff!important;
+      }
+    }
+  }
+
+}
+
 // GALERÍA DE IMAGENES
 #options div {
   display: inline-block;
@@ -34,6 +62,19 @@ align-items: center;
   width: 80%;
   margin: 0 auto;
   padding-top: 21px;
+}
+#tabs {
+  margin-top: 0;
+  .tab a.active {
+    background: rgba(238, 238, 238, 0.5);
+  }
+  li.indicator {
+    background: $bg-secondary;
+  }
+  .tab a {
+    color: $bg-btn;
+
+  }
 }
 #botones ul li {
   display: inline-block;
@@ -80,6 +121,7 @@ align-items: center;
   }
   &__btn {
     margin-top: 21px;
+
   }
 }
 
