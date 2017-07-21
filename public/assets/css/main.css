@@ -3,3 +3,29 @@
   margin: 0;
   padding: 0;
 }
+
+/*GENERAL */
+#general {
+  margin-top: 140px;
+}
+.color-circle {
+        background: #000!important;
+    }
+#options div {
+  display: inline-block;
+}
+
+.tabs-content {
+  height: 500vh!important;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 21px;
+}
+#botones ul li {
+  display: inline-block;
+}
+
+#botones li button {
+  width: 42px;
+  height: 42px;
+}
