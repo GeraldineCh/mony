@@ -1,5 +1,8 @@
 'use strict';
 
+$(".button-collapse").sideNav();
+
+
 const state = {
   user: {
     name: null,
@@ -17,3 +20,4 @@ const state = {
 //   messagingSenderId: "947896289488"
 // };
 // firebase.initializeApp(config);
+
