@@ -5,7 +5,8 @@
     var space =/^\s+$/;
   var share = document.getElementById("post-content");
   var content_LS;
-  var content =[{usuario: "ALBERT EINSTEIN", contenido: " La vida es una especie de bicicleta. Si quieres mantener el equilibrio, pedalea hacia delante"}];
+  var content =[{usuario: "ALBERT EINSTEIN",
+                contenido: " La vida es una especie de bicicleta. Si quieres mantener el equilibrio, pedalea hacia delante"}];
 
   if(!localStorage.getItem('publicar')){
     localStorage.setItem('publicar',JSON.stringify(content));
@@ -15,18 +16,18 @@
     content_LS = JSON.parse(localStorage.getItem('publicar'));
   }
 
-    mostrarContent(content_LS);
+    $(window).on("load", function (){mostrarContent(content_LS)});
 
   document.getElementById("publicar").addEventListener("click", function(e)
   {
       e.preventDefault();
       var user = document.getElementById("user");
       var area = document.getElementById("area");
-      validatePost(user,area);
+      validar(user,area);
 
   });
 
-  function validatePost(user,area){
+  var validar = function validatePost(user,area) {
       if(!space.test(user.value) && !space.test(area.value) && user.value && area.value){
         createPanel(document.createTextNode(user.value), document.createTextNode(area.value));
         cleanBox(user, area);
@@ -62,11 +63,12 @@
   }
   function contentforShare(content,user) {
     if(!space.test(content) && !space.test(user) &&content !="" && user!=""){ //ME PERMITE QUE A LA HORA DE RECARGAR GUARDE CONTENIDO VACÍO
+      console.log(user);
       content_LS.push({usuario:user,contenido:content});
       localStorage.setItem("publicar",JSON.stringify(content_LS));
     }
   }
-  function mostrarContent(array){
+  var mostarCont =function mostrarContent(array){
       array.map(e => createPanel(document.createTextNode(e.usuario), document.createTextNode(e.contenido)));
       share.classList.add('active');
   };
