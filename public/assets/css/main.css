@@ -1,2 +1,59 @@
-*{box-sizing:border-box;margin:0;padding:0}.social{margin-top:6rem}.pass{height:50x !important;width:320px}.slide-intro .tabs-content{height:150vh !important}.empresa{margin-top:5rem}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+/*
+Botones Facebook y Google LogIn
+*/
+.social {
+  margin-top: 6rem; }
+
+.pass {
+  height: 50x !important;
+  width: 320px; }
+
+.slide-intro .tabs-content {
+  height: 150vh !important; }
+
+.empresa {
+  margin-top: 5rem; }
+
+h1 {
+  font-weight: 900;
+  text-shadow: 2px 5px 3px white;
+  color: #4c4ca5; }
+
+#home {
+  background-size: cover;
+  background-image: url(../img/mujer_empresaria.jpg);
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding-top: 15%; }
+  #home .card {
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    margin: 0 auto;
+    margin-left: 21px;
+    padding-top: 21px;
+    padding-bottom: 21px;
+    margin-bottom: 21px; }
+    #home .card .btn {
+      background-color: #69F0AE; }
+  #home #invierte {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    margin: 0 auto; }
+
+header .brand-logo span {
+  font-size: 21px; }
+
+@media (max-width: 648oc) {
+  #home {
+    background-position-x: 85%;
+    background-position-y: 0; } }
+
 /*# sourceMappingURL=main.css.map */

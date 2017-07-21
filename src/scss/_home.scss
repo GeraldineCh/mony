@@ -1,0 +1,49 @@
+
+h1 {
+  font-weight: 900;
+  text-shadow: 2px 5px 3px white;
+  color: #4c4ca5;
+}
+
+#home {
+
+  background-size: cover;
+  background-image: url(../img/mujer_empresaria.jpg);
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding-top: 15%;
+  .card {
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    margin: 0 auto;
+    margin-left: 21px;
+    padding-top: 21px;
+    padding-bottom: 21px;
+    margin-bottom: 21px;
+  .btn {
+    background-color: #69F0AE;
+  }
+  }
+  #invierte {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+header {
+  .brand-logo span {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 648oc) {
+  #home {
+    background-position-x: 85%;
+      background-position-y: 0;
+
+  }
+}
