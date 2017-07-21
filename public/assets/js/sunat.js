@@ -30,6 +30,6 @@ function addDate(data) {
 }
 
 $('#add').on("click", function () {
-  $(this).after('<div class="row">' +
-    '<div class="col s12 l10 offset-l1"><input type="text" placeholder="Dni"><input type="text" placeholder="Nombre"><div></div>');
+  $(this).after('<div class="row">' +  '<div class="col s12 l10 offset-l1">' +
+    '<input type="text" placeholder="Dni"><input type="text" placeholder="Nombre"><div></div>');
 });

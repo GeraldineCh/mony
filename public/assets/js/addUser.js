@@ -10,12 +10,10 @@ var config = {
 firebase.initializeApp(config);
 var database = firebase.database();
 
+reference1 = database.ref("users").child(0);
+addUser(reference1,"Liliana", "lili143", "lili7@gmail.com", "987927897", "10012345656", "Av. San Isido N°774" , " SAC",  "Venta calzado" , "Calzados Jorgito SAC", "Representante legal", "part1", "descripcion", "objetivo", "20 000", "1500", "25");
 
-reference1 = database.ref("users");
-addUser(reference1,"Liliana", "lili123", "lili@sds.com", "987987897", "10012345656", "Expasión tienda de calzado", "sac", "Galeria El Ovalo", "Av. Las Gadernias", "Representante legal", "part1", "sad", "descripcion", "objetivo", "20 000", "1500", "25");
-
-
-function addUser(reference1,name, password, email, phone, ruc, bname, type, tradename, address, position, partners, pname, description, objetive, amountrequired, amountraised, inversors){
+function addUser(reference1, name, password, email, phone, ruc, address, type, tradename, businessname, position, partners, description, objetive, amountrequired, amountraised, inversors){
   var obj = {
     "user": {
       "name": name,
@@ -25,7 +23,7 @@ function addUser(reference1,name, password, email, phone, ruc, bname, type, trad
     },
     "cia": {
       "ruc": ruc,
-      "business-name": bname,
+      "business-name": businessname,
       "type": type,
       "trade-name": tradename,
       "address": address,
@@ -33,7 +31,6 @@ function addUser(reference1,name, password, email, phone, ruc, bname, type, trad
       "partners": partners
     },
     "proyecto": {
-      "name": pname,
       "description": description,
       "objetive": objetive,
       "amount-required": amountrequired,
@@ -41,5 +38,5 @@ function addUser(reference1,name, password, email, phone, ruc, bname, type, trad
       "inversors": inversors
     }
   };
-  reference1.set(obj);
+  reference1.update(obj);
 }
