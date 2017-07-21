@@ -24,7 +24,8 @@
   },
   "homepage": "https://github.com/GeraldineCh/ch-interbank#readme",
   "dependencies": {
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "materialize-social": "^1.0.0"
   },
   "devDependencies": {
     "browser-sync": "^2.18.12",
