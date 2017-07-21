@@ -5,7 +5,7 @@ const state = {
 }
 
 $( _ => {
-  // Inicialización del Firebase
+  // Inicialización de Firebase
   var config = {
     apiKey: "AIzaSyCcxON3o7U44BBuen1VzVn8MQicwtbf1qA",
     authDomain: "mony-test.firebaseapp.com",
@@ -15,38 +15,52 @@ $( _ => {
     messagingSenderId: "947896289488"
   };
   firebase.initializeApp(config);
-
-  //Base de datos
   const db = firebase.database();
-  //Referencia
-  var reference = null;
+  var ref = null;
 
-  //Referencia
-  // var reference = db.ref('users/1');
-  //Envío de datos
-  // const result = $('#result');
-  //   reference.set(
-  //  {
-  //    'user': {
-  //      'name': 'miriam',
-  //      'full_name':'miriam mendoza',
-  //      'password': '12345',
-  //      'email': 'miriam.mendoza@gmail.com',
-  //      'phone': null
-  //    }
-  //  }, _ => {
-  //    console.log('El registro se ha realizado correctamente');
-  //  });
+  // Evento login
+  $('#login').on('click', _ => {
+    var email = $('#email').val();
+    var password = $('#password').val();
+    const auth = firebase.auth();
+    const promise = auth.signInWithEmailAndPassword(email, password);
+    promise.catch(e => console.log(e.message));
+  });
 
-  //Obtener datos del usuario
   $('#register').on('click', _ => {
-    var user = $('#name').val();
-    var pass = $('#password').val();
+    var email = $('#email').val();
+    var password = $('#password').val();
+    const auth = firebase.auth();
+    const promise = auth.createUserWithEmailAndPassword(email, password);
+    promise.catch(e => console.log(e.message));
+  });
 
-    reference = db.ref().child('users');
-    reference.on('value', snap => {
-    state.users = snap.val();
-    console.log(state.users);
-    });
+  $('#logout').on('click', _ => {
+    firebase.auth().signOut();
+  });
+
+  firebase.auth().onAuthStateChanged( firebaseUser => {
+    if(firebaseUser) {
+      console.log(firebaseUser);
+    } else {
+      console.log('no logueado');
+    }
   });
 });
+
+
+// const loadUsers = (db, ref) => {
+//   var reference = db.ref().child(ref);
+//   reference.on('value', snap => {
+//   state.users = snap.val();
+//   });
+// }
+// const validateUser = (username, password) => {
+//   var result = (state.users).filter(function(data) {
+//       return username == data.user.name && password == data.user.password;
+//   });
+//   if (result.length == 0) {
+//     return console.log('Usuario o contraseña incorrecto');
+//   }
+//   return console.log(('Contraseña correcta'));
+// }
