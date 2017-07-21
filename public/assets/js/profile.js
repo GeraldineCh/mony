@@ -1,71 +1,78 @@
-
-  // $('.owl-carousel').owlCarousel({
-  //     loop:true,
-  //     margin:10,
-  //     nav:true,
-  //     responsive:{
-  //         0:{
-  //             items:1
-  //         },
-  //         600:{
-  //             items:3
-  //         },
-  //         1000:{
-  //             items:5
-  //         }
-  //     }
-  // })
-
   $( () => {
-     $(".button-collapse").sideNav();
-     $('ul.tabs').tabs({'swipeable':true});
-     $('.modal').modal();
+    $(".button-collapse").sideNav();
+    $('ul.tabs').tabs({'swipeable':true});
+    $('.modal').modal();
+    var space =/^\s+$/;
+  var share = document.getElementById("post-content");
+  var content_LS;
+  var content =[{usuario: "ALBERT EINSTEIN",
+                contenido: " La vida es una especie de bicicleta. Si quieres mantener el equilibrio, pedalea hacia delante"}];
 
-      var firstImg = 0;
-      var slider = $("#carousel");
-      var lyst = $("#carousel .slider__listas");
-      var circle = $(".btn__slider");
+  if(!localStorage.getItem('publicar')){
+    localStorage.setItem('publicar',JSON.stringify(content));
+    content_LS = JSON.parse(localStorage.getItem('publicar'));
+  }
+  else{
+    content_LS = JSON.parse(localStorage.getItem('publicar'));
+  }
 
-      showImg(firstImg);
-      $("#btn-next").on('click',function(e) {
-          e.preventDefault();
-          moveImg(1);
-      });
-      $("#btn-prev").on('click',function(e) {
-          e.preventDefault();
-          moveImg(-1);
-      });
-      function showImg(valor){
-        lyst.hide();
-        lyst.eq(valor).show();
-        circle.removeClass("color-circle");
-        circle.eq(valor).addClass("color-circle");
-        firstImg = valor + 1;
-      }
+    $(window).on("load", function (){mostrarContent(content_LS)});
 
-      function moveImg(valor){
-        firstImg += valor;
-        if(firstImg > lyst.length){
-          firstImg = 1;
-        }
-        if(firstImg < 1){
-          firstImg = lyst.length;
-        }
-        showImg(firstImg-1);
-      }
-      // SLIDER CIRCLE
-      circle.on("click",function(){
-          switch (this.id) {
-            case "first":  showImg(0);
-              break;
-            case "second": showImg(1);
-              break;
-            case "third":  showImg(2);
-              break;
-            case "fourth":  showImg(3);
-              break;
-            case "fifth":  showImg(4);
-              break;
-          }
-        });
+  document.getElementById("publicar").addEventListener("click", function(e)
+  {
+      e.preventDefault();
+      var user = document.getElementById("user");
+      var area = document.getElementById("area");
+      validar(user,area);
+
+
+
+
+  });
+
+  var validar = function validatePost(user,area) {
+      if(!space.test(user.value) && !space.test(area.value) && user.value && area.value){
+        createPanel(document.createTextNode(user.value), document.createTextNode(area.value));
+        cleanBox(user, area);
+      } else{
+       alert("Don't exist content");
+    }
+  }
+
+  function createPanel(user, area){
+    var shareContent = document.createElement("div");
+    var cdf = document.createDocumentFragment();
+    var firstChild = share.firstElementChild;
+    var boxArea = document.createElement("span");
+    var boxUser = document.createElement("p");
+    shareContent.classList.add("div-share");
+    shareContent.setAttribute("id", "id-div-share")
+
+    boxArea.appendChild(area);
+    boxUser.appendChild(user);
+    cdf.appendChild(boxArea);
+    cdf.appendChild(boxUser);
+    shareContent.appendChild(cdf);
+    share.appendChild(shareContent);
+    share.insertBefore(shareContent, firstChild);
+
+     contentforShare(document.getElementById("id-div-share").firstChild.outerText,
+                    document.getElementById("id-div-share").lastChild.outerText);
+    //  safePanel( document.getElementById("id-div-share").firstChild, document.getElementById("id-div-share").lastChild.)
+  }
+
+  function cleanBox(u,a) {
+    u.value ="";   a.value ="";
+  }
+  function contentforShare(content,user) {
+    if(!space.test(content) && !space.test(user) &&content !="" && user!=""){ //ME PERMITE QUE A LA HORA DE RECARGAR GUARDE CONTENIDO VACÍO
+      console.log(user);
+      content_LS.push({usuario:user,contenido:content});
+      localStorage.setItem("publicar",JSON.stringify(content_LS));
+    }
+  }
+  var mostarCont =function mostrarContent(array){
+      array.map(e => createPanel(document.createTextNode(e.usuario), document.createTextNode(e.contenido)));
+      share.classList.add('active');
+  };
   })
