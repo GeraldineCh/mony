@@ -25,6 +25,9 @@
       var area = document.getElementById("area");
       validar(user,area);
 
+
+
+
   });
 
   var validar = function validatePost(user,area) {

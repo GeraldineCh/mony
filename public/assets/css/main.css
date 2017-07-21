@@ -61,7 +61,7 @@ header .nav-wrapper {
   display: inline-block; }
 
 #tabs .tabs-content {
-  height: 500vh !important;
+  height: 230vh !important;
   width: 80%;
   margin: 0 auto;
   padding-top: 21px; }
@@ -164,6 +164,9 @@ COMENTARIOS
     font-size: 13px; }
 
   .button {
-    margin-left: 28vw; } }
+    margin-left: 28vw; }
+
+  #tabs .tabs-content {
+    height: 600vh !important; } }
 
 /*# sourceMappingURL=main.css.map */
