@@ -1,10 +1,6 @@
 'use strict';
-<<<<<<< HEAD
-$( document ).ready(function() {
-=======
 
-$( _ => {
->>>>>>> fusiones
+$( document ).ready(function() 
   // Inicialización de Firebase
   var config = {
     apiKey: "AIzaSyCcxON3o7U44BBuen1VzVn8MQicwtbf1qA",
