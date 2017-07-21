@@ -17,3 +17,14 @@ Botones Facebook y Google LogIn
 .button-icon {
  height: 15px;
 }
+
+#ruc, #lpartner {
+ max-width: 66%;
+}
+
+
+@media only screen and (max-width: 500px) {
+    #ruc, #lpartner {
+    max-width: 62%;
+   }
+}
