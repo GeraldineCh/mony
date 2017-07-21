@@ -48,10 +48,16 @@ align-items: center;
   h1 {
     margin-top: 0;
   }
+
 }
 /*DESCRIPCIÓN DEL PROYECTO*/
-#acerca-del-proyecto {
-  margin-top: 6%;
+.descProy {
+  &__text {
+    line-height: 1.8;
+  }
+  h3 {
+    margin-top: 35px;
+  }
 }
 .proy-imagen {
   // width: 50px;
@@ -60,7 +66,7 @@ align-items: center;
 
 /*TIPOS DE INVERSIONES*/
 #tipos-inversion {
-  margin-top: 12%;
+  margin-top: 2%;
 }
 .typeInv {
   &__text {

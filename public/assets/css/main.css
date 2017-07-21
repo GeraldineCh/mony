@@ -53,12 +53,14 @@ GENERAL
   margin-top: 0; }
 
 /*DESCRIPCIÓN DEL PROYECTO*/
-#acerca-del-proyecto {
-  margin-top: 6%; }
+.descProy__text {
+  line-height: 1.8; }
+.descProy h3 {
+  margin-top: 35px; }
 
 /*TIPOS DE INVERSIONES*/
 #tipos-inversion {
-  margin-top: 12%; }
+  margin-top: 2%; }
 
 .typeInv__text {
   text-transform: uppercase;
