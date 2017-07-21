@@ -49,6 +49,9 @@ GENERAL
   background: #40b3df;
   height: 54px; }
 
+h1 {
+  color: #3daa7e; }
+
 /*Header*/
 header .nav-wrapper {
   border-bottom: 3px solid blue; }

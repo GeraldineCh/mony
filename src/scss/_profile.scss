@@ -38,6 +38,9 @@ align-items: center;
   height: 54px;
   @extend  %flex;
 }
+h1 {
+  color: rgb(61, 170, 126);
+}
 /*Header*/
 header {
   .nav-wrapper {
