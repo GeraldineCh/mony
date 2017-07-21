@@ -1,3 +1,4 @@
+
 *{box-sizing:border-box;margin:0;padding:0}.social{margin-top:6rem}.pass{height:50px !important;width:320px}.slide-intro .tabs-content{height:150vh !important}.empresa{margin-top:5rem}
 /*# sourceMappingURL=main.css.map */
 
@@ -8,3 +9,98 @@
 .margin{
   margin: 20px 0;
 }
+
+
+*{box-sizing:border-box;margin:0;padding:0}.social{margin-top:6rem}.pass{height:50px !important;width:320px}.slide-intro .tabs-content{height:500px !important}.button-icon{height:15px}#ruc,#lpartner{max-width:66%}@media only screen and (max-width: 500px){#ruc,#lpartner{max-width:62%}}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+/*
+Botones Facebook y Google LogIn
+*/
+.social {
+  margin-top: 6rem; }
+
+.pass {
+  height: 50px !important;
+  width: 320px; }
+
+.slide-intro .tabs-content {
+  height: 150vh !important; }
+
+.empresa {
+  margin-top: 5rem; }
+
+h1 {
+  font-weight: 900;
+  text-shadow: 3px 1px 3px blue;
+  color: white; }
+
+#home {
+  background-size: cover;
+  background-image: url(../img/mujer_empresaria.jpg);
+  background-repeat: no-repeat;
+  height: 80vh;
+  padding-top: 15%; }
+  #home .card {
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    margin: 0 auto;
+    margin-left: 21px;
+    padding-top: 21px;
+    padding-bottom: 21px;
+    margin-bottom: 21px; }
+  #home #invierte {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    margin: 0 auto;
+    font-size: 24px; }
+
+header .brand-logo span {
+  font-size: 21px; }
+
+#descripcion {
+  font-style: italic; }
+
+#acerca {
+  margin-top: 21px;
+  background: rgba(211, 206, 206, 0.15); }
+  #acerca .square {
+    height: 350px; }
+  #acerca h6 {
+    font-size: 21px;
+    line-height: 1.6; }
+
+.square.z-depth-5 {
+  padding: 14px 35px; }
+
+.square img {
+  width: 125px;
+  margin-top: 14px;
+  margin-bottom: 14px; }
+
+#actualidad .z-depth-3 {
+  height: 140px;
+  width: 510px;
+  margin-left: 7px;
+  padding-top: 21px; }
+
+#actualidad .general {
+  background-color: #8bc588;
+  color: #FFF; }
+  #actualidad .general h5 {
+    font-size: 35px; }
+  #actualidad .general h6 {
+    font-size: 28px; }
+
+@media (max-width: 648px) {
+  #home {
+    background-position-x: 85%;
+    background-position-y: 0; } }
+
