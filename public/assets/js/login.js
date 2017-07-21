@@ -1,7 +1,5 @@
 'use strict';
 
-$(".button-collapse").sideNav();
-
 $( _ => {
   // Inicialización de Firebase
   var config = {
