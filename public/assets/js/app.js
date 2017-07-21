@@ -50,5 +50,5 @@ reference.update(
   }
   ,function()
   {
-    alert('El alta se ha realizado correctamente');
+    console.log('El alta se ha realizado correctamente');
   });
