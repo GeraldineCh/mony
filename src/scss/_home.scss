@@ -1,8 +1,8 @@
 
 h1 {
   font-weight: 900;
-  text-shadow: 2px 5px 3px white;
-  color: #4c4ca5;
+  text-shadow: 3px 1px 3px blue;
+  color: white;
 }
 
 #home {
@@ -20,9 +20,8 @@ h1 {
     padding-top: 21px;
     padding-bottom: 21px;
     margin-bottom: 21px;
-  .btn {
-    background-color: #69F0AE;
-  }
+
+
   }
   #invierte {
     height: 70px;
@@ -31,6 +30,7 @@ h1 {
     justify-content: center;
     width: 70%;
     margin: 0 auto;
+    font-size: 24px;
   }
 }
 
@@ -39,6 +39,12 @@ header {
     font-size: 21px;
   }
 }
+#acerca {
+  margin-top: 21px;
+}
+.square.z-depth-5 {
+    padding: 14px 7px;
+  }
 
 @media (max-width: 648oc) {
   #home {

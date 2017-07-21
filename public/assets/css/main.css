@@ -21,8 +21,8 @@ Botones Facebook y Google LogIn
 
 h1 {
   font-weight: 900;
-  text-shadow: 2px 5px 3px white;
-  color: #4c4ca5; }
+  text-shadow: 3px 1px 3px blue;
+  color: white; }
 
 #home {
   background-size: cover;
@@ -38,18 +38,23 @@ h1 {
     padding-top: 21px;
     padding-bottom: 21px;
     margin-bottom: 21px; }
-    #home .card .btn {
-      background-color: #69F0AE; }
   #home #invierte {
     height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 70%;
-    margin: 0 auto; }
+    margin: 0 auto;
+    font-size: 24px; }
 
 header .brand-logo span {
   font-size: 21px; }
+
+#acerca {
+  margin-top: 21px; }
+
+.square.z-depth-5 {
+  padding: 14px 7px; }
 
 @media (max-width: 648oc) {
   #home {
