@@ -1,6 +1,6 @@
 'use strict';
 
-$( document ).ready(function() 
+$( document ).ready(function() {
   // Inicialización de Firebase
   var config = {
     apiKey: "AIzaSyCcxON3o7U44BBuen1VzVn8MQicwtbf1qA",
@@ -78,5 +78,5 @@ function addUser(name, email, pass) {
   localStorage.setItem("username", name);
   localStorage.setItem("email", email);
   localStorage.setItem("pass", pass);
-  location.href="welcome_user.html";
+  location.href="profile.html";
 }
