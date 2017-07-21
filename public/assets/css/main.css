@@ -51,10 +51,21 @@ header .brand-logo span {
   font-size: 21px; }
 
 #acerca {
-  margin-top: 21px; }
+  margin-top: 21px;
+  background: rgba(211, 206, 206, 0.15); }
+  #acerca .square {
+    height: 350px; }
+  #acerca h6 {
+    font-size: 21px;
+    line-height: 1.6; }
 
 .square.z-depth-5 {
-  padding: 14px 7px; }
+  padding: 14px 35px; }
+
+.square img {
+  width: 125px;
+  margin-top: 14px;
+  margin-bottom: 14px; }
 
 @media (max-width: 648oc) {
   #home {
