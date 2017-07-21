@@ -18,7 +18,7 @@
 
   $( () => {
      $(".button-collapse").sideNav();
-     $('ul.tabs').tabs();
+     $('ul.tabs').tabs({'swipeable':true});
      $('.modal').modal();
 
       var firstImg = 0;
