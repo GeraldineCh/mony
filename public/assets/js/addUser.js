@@ -1,3 +1,5 @@
+/**
+
 var config = {
   apiKey: "AIzaSyCcxON3o7U44BBuen1VzVn8MQicwtbf1qA",
   authDomain: "mony-test.firebaseapp.com",
@@ -40,3 +42,5 @@ function addUser(reference1, name, password, email, phone, ruc, address, type, t
   };
   reference.update(obj);
 }
+
+ **/

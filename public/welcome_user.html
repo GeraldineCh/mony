@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Log In</title>
-  <link rel="stylesheet" href="assets/css/materialize.min.css">
-  <link rel="stylesheet" href="assets/css/main.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
-<body>
- 
-   <nav class="nav-extended">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Log In</title>
+    <link rel="stylesheet" href="assets/css/materialize.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+
+  <nav class="nav-extended blue-grey">
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">Mony by Interbank</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -31,20 +31,57 @@
       </ul>
     </div>
   </nav>
- 
-  <div class="row center">
-   <div class="row col s12">
-    <h2>Haz realidad tu proyecto</h2>
-  </div>
-    <div class="row col s12">
-       <a id="js-investor" class="waves-effect waves-light btn pass" href="register_company.html">Crea tu proyecto</a>
+
+
+  <div class="container">
+    <div class="row center">
+      <div class="row col s12">
+        <h2>Juan Javier</h2>
       </div>
-     <div class="row col s12">
-       <a id="js-businessman" class="waves-effect waves-light btn disabled pass" href="#">Invierte en un proyecto</a>
+
+      <div class="row center">
+        <div class="input-field col s8 offset-s2">
+          <input value="Juan Javier" id="first_name2" type="text" class="validate">
+        </div>
       </div>
+
+      <div class="row">
+        <div class="col s12">
+          RUC:
+          <div class="input-field inline">
+            <input id="ruc" placeholder="34567889999" type="text" class="validate">
+          </div>
+          <a class="waves-effect waves-light btn" href="#" id="checkruc">Verificar</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s12">
+          <div id="bussiness-name" class="margin"></div>
+          <div id="address" class="margin"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s12">
+          Agregar socios:
+          <a id="add" class="waves-effect waves-light btn" href="#">+</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s12">
+          <p id="alert"></p>
+          <a id="btn-ruc" disabled="true" class="waves-effect waves-light btn" href="intro.html">Siguiente</a>
+        </div>
+      </div>
+    </div>
   </div>
-  <script src="assets/js/vendor/jquery-3.1.1.min.js"></script>
-  <script src="assets/js/materialize.min.js"></script>
-  <script src="assets/js/app.js"></script>
-</body>
+    <script src="assets/js/vendor/jquery-3.1.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.0/js/materialize.min.js"></script>
+    <!-- Última versión compilada y minificada -->
+    <script src="https://tecactus-4b42.kxcdn.com/reniec-sunat-js.min.js"></script>
+    <script src="assets/js/sunat.js"></script>
+  </body>
 </html>

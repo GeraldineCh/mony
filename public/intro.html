@@ -54,18 +54,18 @@
       <div class="row">
         <div class="col s12">
           Motivo de la inversión:
-          <input id="objetive" placeholder="Expansión a Arequipa" type="text" class="validate">
+          <input id="amount-raised" placeholder="Expansión a Arequipa" type="text" class="validate">
         </div>
       </div>
       <div class="row">
         <div class="col s12">
           Monto de la inversión:
-          <input id="amount-raised" placeholder="S/. 5000" type="text" class="validate">
+          <input id="amount" placeholder="S/. 5000" type="text" class="validate">
         </div>
       </div>
       <div class="row">
         <div class="col s12">
-          <a class="waves-effect waves-light btn" href="">Guardar</a>
+          <a class="waves-effect waves-light btn" href="" id="btn-save">Guardar</a>
         </div>
       </div>
     </div>
@@ -77,13 +77,11 @@
             <div class="input-field col s12">
               <textarea id="description" class="materialize-textarea" data-length="120"></textarea>
             </div>
-            </form>
           </div>
         </div>
         <div class="col s12">
           <p>Video de tu empresa:</p>
           Ingresa un video, aparecera en la parte superior de tu pagina.
-          <form action="#">
             <div class="file-field input-field">
               <div class="btn">
                 <span>Agregar video</span>
@@ -93,8 +91,6 @@
                 <input class="file-path validate" type="text">
               </div>
             </div>
-          </form>
-
         </div>
       </div>
 
@@ -110,7 +106,7 @@
         <div class="col s12">
           <p>Imagen de tu empresa:</p>
           <div class="gray">
-            <form action="#">
+
               <div class="file-field input-field">
                 <div class="btn">
                   <span>Sube una imagen</span>
@@ -120,15 +116,15 @@
                   <input class="file-path validate" type="text">
                 </div>
               </div>
-            </form>
 
           </div>
         </div>
       </div>
     </div>
-
+  </div>
     <script src="assets/js/vendor/jquery-3.1.1.min.js"></script>
-    <script src="assets/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.0/js/materialize.min.js"></script>
     <script src="assets/js/profile.js"></script>
+    <script src="assets/js/app.js"></script>
   </body>
 </html>

@@ -1,23 +1,14 @@
-'use strict';
-
-$(".button-collapse").sideNav();
 
 
-const state = {
-  user: {
-    name: null,
-    password: null,
-    email: null
-  }
-};
-// // Initialize Firebase
-// var config = {
-//   apiKey: "AIzaSyCcxON3o7U44BBuen1VzVn8MQicwtbf1qA",
-//   authDomain: "mony-test.firebaseapp.com",
-//   databaseURL: "https://mony-test.firebaseio.com",
-//   projectId: "mony-test",
-//   storageBucket: "mony-test.appspot.com",
-//   messagingSenderId: "947896289488"
-// };
-// firebase.initializeApp(config);
+document.getElementById("btn-save").addEventListener("click", function () {
+  var tradename = document.getElementById("trade-name").val();
+  var amountraised = document.getElementById("amount-raised").val();
+  var amount = document.getElementById("amount").val();
+  var description = document.getElementById("description").val();
+  localStorage.setItem("tradename", tradename);
+  localStorage.setItem("amountraised", amountraised);
+  localStorage.setItem("description", description);
+  localStorage.setItem("amount", amount);
+  console.log("as");
+});
 
