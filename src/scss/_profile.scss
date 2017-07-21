@@ -1,0 +1,181 @@
+/*
+GENERAL
+*/
+#proyecto,
+#inversor,
+#comentario,
+#contacta {
+  padding-top: 6%;
+}
+
+%flex {
+  display: flex;
+justify-content: center;
+align-items: center;
+}
+.color-circle {
+        background: #000!important;
+}
+.btn-first {
+  width: 50%;
+  margin-top: 45px;
+  background: $bg-primary;
+  height: 54px;
+  @extend  %flex;
+}
+// GALERÍA DE IMAGENES
+#options div {
+  display: inline-block;
+}
+
+.tabs-content {
+  height: 500vh!important;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 21px;
+}
+#botones ul li {
+  display: inline-block;
+  button {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/*PROYECTO*/
+#proyecto {
+  h1 {
+    margin-top: 0;
+  }
+}
+/*DESCRIPCIÓN DEL PROYECTO*/
+#acerca-del-proyecto {
+  margin-top: 6%;
+}
+.proy-imagen {
+  // width: 50px;
+  // height: 120px;
+}
+
+/*TIPOS DE INVERSIONES*/
+#tipos-inversion {
+  margin-top: 12%;
+}
+.typeInv {
+  &__text {
+    text-transform: uppercase;
+    text-decoration: underline;
+
+    &--gray {
+      color: rgb(175, 172, 177)!important;
+
+    }
+  }
+  &__btn {
+    margin-top: 21px;
+  }
+}
+
+/*
+COMENTARIOS
+*/
+.active {
+  visibility: visible;
+}
+
+
+#comentario {
+  #box-share {
+    // padding-top: 6%;
+  }
+  .box-post {
+    .div-share {
+      margin-bottom: 14px;
+      padding: 7px 14px;
+      border-radius: 21px;
+      background:rgba(235, 235, 235, 0.33);
+
+    }
+  }
+  #area{
+    resize: none;
+  }
+  p {
+    margin: 0 auto;
+    text-align: right;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-family: fantasy;
+    color: rgba(12, 115, 78, 0.69);
+  }
+  h2 {
+    color:#f06d06;
+    cursor: default;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: block;
+    -webkit-animation: bounce 0.3s ease infinite alternate;
+
+    font-family: 'Erica One', cursive;
+    font-size: 80px;
+    color: #FFF;
+    text-align: center;
+    line-height: 100px;
+    text-shadow: 0 1px 0 #CCC,
+                 0 2px 0 #CCC,
+                 0 3px 0 #CCC,
+                 0 4px 0 #CCC,
+                 0 5px 0 #CCC,
+                 0 6px 0 transparent,
+                 0 7px 0 transparent,
+                 0 8px 0 transparent,
+                 0 9px 0 transparent,
+                 0 10px 10px rgba(0, 0, 0, .6);
+  }
+}
+
+@-webkit-keyframes bounce {
+  100% {
+    top: -30px;
+
+    text-shadow: 0 1px 0 #CCC,
+                 0 2px 0 #CCC,
+                 0 3px 0 #CCC,
+                 0 4px 0 #CCC,
+                 0 5px 0 #CCC,
+                 0 6px 0 #CCC,
+                 0 7px 0 #CCC,
+                 0 8px 0 #CCC,
+                 0 9px 0 #CCC,
+                 0 30px 30px rgba(0, 0, 0, .3);
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .btn-first {
+    width: 100%;
+  }
+  h2 {
+      font-size: 10vw;
+      line-height: 1.5;
+  }
+  section {
+      width: 100%;
+      margin: 20px auto;
+  }
+  input[type="text"] {
+      width: 60vw;
+  }
+  #user::placeholder {
+      font-size: 13px;
+  }
+  .button {
+      margin-left: 28vw;
+  }
+}
