@@ -33,11 +33,8 @@
     content_LS = JSON.parse(localStorage.getItem('publicar'));
   }
 
-  window.addEventListener("load", function(){
     mostrarContent(content_LS);
 
-
-  })
   document.getElementById("publicar").addEventListener("click", function(e)
   {
       e.preventDefault();

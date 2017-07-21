@@ -36,7 +36,7 @@ GENERAL
 #options div {
   display: inline-block; }
 
-.tabs-content {
+#tabs .tabs-content {
   height: 500vh !important;
   width: 80%;
   margin: 0 auto;
