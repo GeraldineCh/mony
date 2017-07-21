@@ -1,5 +1,7 @@
 'use strict';
 
+$(".button-collapse").sideNav();
+
 $( _ => {
   // Inicialización de Firebase
   var config = {
@@ -14,12 +16,34 @@ $( _ => {
   const db = firebase.database();
   var reference = null;
 
+  //Evento register
+  $('#js-register').on('click', _ => {
+    var email = $('#js-email').val();
+    var user_name = $('#js-username').val();
+    var password = $('#js-password').val();
+
+    const auth = firebase.auth();
+    const promise = auth.createUserWithEmailAndPassword(email, password);
+
+    state.email = email;
+    state.user_name = user_name;
+    state.password  = password;
+
+    promise.catch(e => console.log(e.message));
+    if (state.email === null || state.email === '') {
+      location.href="welcome_user.html";
+    }
+  });
+
   //Evento login
   $('#js-login').on('click', _ => {
-    var email = $('#email').val();
-    var password = $('#password').val();
+    var email = $('#js-email').val();
+    var password = $('#js-password').val();
     const auth = firebase.auth();
     const promise = auth.signInWithEmailAndPassword(email, password);
+    state.email = email;
+    state.password  = password;
+    location.href="welcome_user.html";
     promise.catch(e => console.log(e.message));
   });
 
@@ -27,10 +51,13 @@ $( _ => {
   $('#js-login_fb').on('click', _ => {
      var provider = new firebase.auth.FacebookAuthProvider();
      provider.addScope('public_profile');
-     console.log(provider);
      firebase.auth().signInWithPopup(provider).then((result) => {
        var token = result.credential.accessToken;
        var user = result.user;
+       state.name = null;
+       state.email = null;
+       console.log(user);
+       location.href="welcome_user.html";
      }).catch((error) => {
        var errorCode = error.code;
        var errorMessage = error.message;
@@ -43,12 +70,14 @@ $( _ => {
   $('#js-login_g').on('click', _ => {
     var provider = new firebase.auth.GoogleAuthProvider();
     provider.addScope('https://www.googleapis.com/auth/plus.login');
-    console.log(provider);
     firebase.auth().signInWithPopup(provider).then((result) =>{
       console.log("entraste Google");
       var token = result.credential.accessToken;
       var user = result.user;
+      state.name = null;
+      state.email = null;
       console.log(user);
+      location.href="welcome_user.html";
     }).catch(function (error) {
       console.log(error);
       var errorCode = error.code;
@@ -58,22 +87,11 @@ $( _ => {
     });
   });
 
-  //Evento register
-  $('#js-register').on('click', _ => {
-    var email = $('#js-email').val();
-    var password = $('#js-password').val();
-
-    const auth = firebase.auth();
-    const promise = auth.createUserWithEmailAndPassword(email, password);
-    promise.catch(e => console.log(e.message));
-  });
-
   //Evento logout
   $('#js-logout').on('click', _ => {
     firebase.auth().signOut();
   });
-
-  //Actualizando cambios de login
+  //Actulizando cambios de login
   firebase.auth().onAuthStateChanged( firebaseUser => {
     if(firebaseUser) {
       console.log(firebaseUser);
