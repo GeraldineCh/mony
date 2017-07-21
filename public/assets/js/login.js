@@ -17,26 +17,32 @@ $( _ => {
   //Evento register
   $('#js-register').on('click', _ => {
     var email = $('#js-email').val();
+    var user_name = $('#js-username').val();
     var password = $('#js-password').val();
 
     const auth = firebase.auth();
     const promise = auth.createUserWithEmailAndPassword(email, password);
+
     state.email = email;
+    state.user_name = user_name;
     state.password  = password;
-    location.href="welcome.html";
+
     promise.catch(e => console.log(e.message));
+    if (state.email === null || state.email === '') {
+      location.href="welcome_user.html";
+    }
   });
 
   //Evento login
   $('#js-login').on('click', _ => {
-    var email = $('#email').val();
-    var password = $('#password').val();
+    var email = $('#js-email').val();
+    var password = $('#js-password').val();
     const auth = firebase.auth();
     const promise = auth.signInWithEmailAndPassword(email, password);
     state.email = email;
     state.password  = password;
+    location.href="welcome_user.html";
     promise.catch(e => console.log(e.message));
-    location.href="welcome.html";
   });
 
   //Evento login con facebook
@@ -49,7 +55,7 @@ $( _ => {
        state.name = null;
        state.email = null;
        console.log(user);
-       location.href="welcome.html";
+       location.href="welcome_user.html";
      }).catch((error) => {
        var errorCode = error.code;
        var errorMessage = error.message;
@@ -69,7 +75,7 @@ $( _ => {
       state.name = null;
       state.email = null;
       console.log(user);
-      location.href="welcome.html";
+      location.href="welcome_user.html";
     }).catch(function (error) {
       console.log(error);
       var errorCode = error.code;
